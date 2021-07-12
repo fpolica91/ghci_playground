@@ -11,6 +11,11 @@ isSquare (a, b)
 
 area (a, b) = a * b
 
+areaAndPerimeter :: Num b => (b, b) -> (b, b)
 areaAndPerimeter (a, b) = (area (a, b), perimeter (a, b))
 
-areaAndPerimeterRefactor tup = (area tup, perimeter tup)
+simplifiedAreaPer :: Num b => (b, b) -> (b, b)
+simplifiedAreaPer tup = (area tup, perimeter tup)
+
+ifThenElse (True, t, f) = t
+ifThenElse (b, t, f) = f
