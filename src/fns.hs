@@ -15,10 +15,6 @@ sign n
   | n < 0 = -1
   | n == 0 = 0
 
-isZero n
-  | n == 0 = True
-  | n /= 0 = False
-
 isPalindrome :: Eq a => [a] -> Bool
 isPalindrome s
   | reverse s == s = True
@@ -29,3 +25,19 @@ fizzbuzz i
   | i `mod` 3 == 0 = "fizz"
   | i `mod` 5 == 0 = "buzz"
   | otherwise = show i
+
+interest investment 0 rate = investment
+interest investment years rate = rate * interest investment (years - 1) rate
+
+-- compoundInterest amount years = 1.05 * (compoundInterest (years - 1))
+
+isZero n
+  | n == 0 = True
+  | n /= 0 = False
+
+-- interest investment (years - 1) rate
+compoundInterest investment years rate
+  | isZero years = investment
+  | isZero investment = 0
+  | isZero rate = investment
+  | otherwise = rate * compoundInterest investment (years -1) rate
