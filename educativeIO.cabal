@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6fca3d9033c315dafc1cc1ca3147f52690c0579be4b58f6e978c02b2d4a599ba
+-- hash: e0ce382e341388c8e4efc8bf6658c6bb5e560441ef06e6e18a9da6b5dfad2527
 
 name:           educativeIO
 version:        0.1.0.0
@@ -27,6 +27,7 @@ source-repository head
 
 library
   exposed-modules:
+      HOC
       Lib
   other-modules:
       Paths_educativeIO
