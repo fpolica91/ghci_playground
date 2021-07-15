@@ -12,6 +12,8 @@ timesSixteen = applyTwice quadruple
 -- NOTE  composition operator ., which combines two functions @compose
 compose = double . next
 
+composedQuad = double . double
+
 curryISC fn i s = fn (i, s)
 
 uncurryISC fn (i, s) = fn i s
