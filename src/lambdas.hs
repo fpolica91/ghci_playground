@@ -17,3 +17,9 @@ greatestOddDivisor = applyUntil (\number -> mod number 2 == 1) (\number -> div n
 smallestNatThat number = applyUntil number (\num -> num + 1) 1
 
 smallestNumberThatIsChar = smallestNatThat (\num -> isLetter (chr num))
+
+f = \n -> n ^ 2
+
+_map = (\x -> x + 3)
+
+putc = map (\xs -> 'c' : xs) ["apples", "oranges", "mangos"]
